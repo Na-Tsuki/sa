@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+	<!-- Some or all of these can be flipped to true for debugging -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="TeacherAction" extends="employee" namespace="/tea">
+	
+		<action name="add" class="hjjf.scss.action.TeacherAction" method="add">
+			<result name="success">/WEB-INF/content/admin/teacher.jsp</result>
+			<result name="error">/WEB-INF/content/admin/teacher.jsp</result>
+		</action>
+		
+		<action name="delete" class="hjjf.scss.action.TeacherAction" method="delete">
+			<result name="success">/WEB-INF/content/admin/teacher.jsp</result>
+			<result name="error">/WEB-INF/content/admin/teacher.jsp</result>
+		</action>
+		
+		<action name="update" class="hjjf.scss.action.TeacherAction" method="update">
+			<result name="success">/WEB-INF/content/admin/teacher.jsp</result>
+			<result name="error">/WEB-INF/content/admin/teacher.jsp</result>
+		</action>
+		
+		<action name="search" class="hjjf.scss.action.TeacherAction" method="search">
+			
+		</action>
+		
+		<action name="login" class="hjjf.scss.action.TeacherAction" method="login">
+			<result name="success">/WEB-INF/content/teacher/teacherup.jsp</result>
+			<result name="error">/WEB-INF/content/teacherLogin.jsp</result>
+		</action>
+		
+		<action name="selfup" class="hjjf.scss.action.TeacherAction" method="selfup">
+			<result name="success">/WEB-INF/content/teacher/teacherup.jsp</result>
+			<result name="error">/WEB-INF/content/teacher/teacherup.jsp</result>
+		</action>
+		
+		<action name="execute" class="hjjf.scss.action.TeacherPhoto" method="execute">
+			<result name="success">/WEB-INF/content/teacher/teacherup.jsp</result>
+			<result name="error">/WEB-INF/content/teacher/teacherup.jsp</result>
+		</action>
+		
+		<action name="passup" class="hjjf.scss.action.TeacherAction" method="passup">
+			<result name="success">/WEB-INF/content/teacher/teapassup.jsp</result>
+			<result name="error">/WEB-INF/content/teacher/teapassup.jsp</result>
+		</action>
+	</package>
+	
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

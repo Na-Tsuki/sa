@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+	<!-- Some or all of these can be flipped to true for debugging -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="adminStruts" extends="employee" namespace="/adm">
+	
+	<action name="add" class="hjjf.scss.action.AdminAction" method="add">
+			<result name="success">/WEB-INF/content/admin/admindo.jsp</result>
+			<result name="error">/WEB-INF/content/admin/admindo.jsp</result>
+		</action>
+		
+		<action name="delete" class="hjjf.scss.action.AdminAction" method="delete">
+			<result name="success">/WEB-INF/content/admin/admindo.jsp</result>
+			<result name="error">/WEB-INF/content/admin/admindo.jsp</result>
+		</action>
+		
+		<action name="update" class="hjjf.scss.action.AdminAction" method="update">
+			<result name="success">/WEB-INF/content/admin/admindo.jsp</result>
+			<result name="error">/WEB-INF/content/admin/admindo.jsp</result>
+		</action>
+		
+		<action name="selfup" class="hjjf.scss.action.AdminAction" method="selfup">
+			<result name="success">/WEB-INF/content/admin/adminup.jsp</result>
+			<result name="error">/WEB-INF/content/admin/adminup.jsp</result>
+		</action>
+		
+		<action name="passup" class="hjjf.scss.action.AdminAction" method="passup">
+			<result name="success">/WEB-INF/content/admin/admpassup.jsp</result>
+			<result name="error">/WEB-INF/content/admin/admpassup.jsp</result>
+		</action>
+		
+		<action name="execute" class="hjjf.scss.action.AdminPhoto" method="execute">
+			<result name="success">/WEB-INF/content/admin/adminup.jsp</result>
+			<result name="error">/WEB-INF/content/admin/adminup.jsp</result>
+		</action>
+		
+		<action name="search" class="hjjf.scss.action.AdminAction" method="search">
+		</action>
+	
+         <action name="login"  class="hjjf.scss.action.AdminAction" method="login">
+           <result name="success">/WEB-INF/content/admin/admindo.jsp</result> 
+            <result name="error">/WEB-INF/content/adminLogin.jsp</result> 
+         </action>     
+     </package> 
+	
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

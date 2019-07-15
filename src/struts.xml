@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+	<!-- Some or all of these can be flipped to true for debugging -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="employee" extends="struts-default">
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+	</package>
+	
+	
+	<include file="hjjf/scss/action/teacherStruts.xml"></include> 
+	<include file="hjjf/scss/action/adminStruts.xml"></include>
+	
+	
+<include file="hjjf/scss/action/collegeStruts.xml"></include>
+	<include file="hjjf/scss/action/departmentStruts.xml"></include>
+	<include file="hjjf/scss/action/professionStruts.xml"></include>
+	<include file="hjjf/scss/action/classStruts.xml"></include> 
+	<include file="hjjf/scss/action/studentStruts.xml"></include>
+	<include file="hjjf/scss/action/classroomStruts.xml"></include>
+	<include file="hjjf/scss/action/courseStruts.xml"></include>
+	
+	<include file="hjjf/scss/action/teachtaskStruts.xml"></include>
+	<include file="hjjf/scss/action/scheduleStruts.xml"></include>
+	<include file="hjjf/scss/action/coursescheduleStruts.xml"></include>
+	
+	
+	
+	<include file="hjjf/scss/action/auditStruts.xml"></include>
+	<include file="hjjf/scss/action/noticeStruts.xml"></include>
+	
+	
+	<include file="hjjf/scss/action/hrefStruts.xml"></include>
+	
+	
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

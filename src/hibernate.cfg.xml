@@ -1,0 +1,41 @@
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory name="foo">
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+
+
+	<property name="myeclipse.connection.profile">
+		com.microsoft.sqlserver.jdbc.SQLServerDriver 2
+	</property>
+
+	<property name="dialect">
+		org.hibernate.dialect.SQLServerDialect
+	</property>
+
+	<mapping resource="hjjf/scss/model/admin.hbm.xml" />
+	<mapping resource="hjjf/scss/model/audit.hbm.xml" />
+	<mapping resource="hjjf/scss/model/class.hbm.xml" />
+	<mapping resource="hjjf/scss/model/classroom.hbm.xml" />
+	<mapping resource="hjjf/scss/model/college.hbm.xml" />
+	<mapping resource="hjjf/scss/model/course.hbm.xml" />
+	<mapping resource="hjjf/scss/model/courseschedule.hbm.xml" />
+	<mapping resource="hjjf/scss/model/department.hbm.xml" />
+	<mapping resource="hjjf/scss/model/profession.hbm.xml" />
+	<mapping resource="hjjf/scss/model/schedule.hbm.xml" />
+	<mapping resource="hjjf/scss/model/student.hbm.xml" />
+	<mapping resource="hjjf/scss/model/teacher.hbm.xml" />
+	<mapping resource="hjjf/scss/model/teachtask.hbm.xml" />
+	<mapping resource="hjjf/scss/model/notice.hbm.xml" />
+
+</session-factory>
+</hibernate-configuration>

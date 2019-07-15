@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="adminInterface" class="hjjf.scss.impl.AdminMgrImpl">
+		<property name="adminDao" ref="adminDao"></property>
+	</bean>
+
+	<bean id="teacherInterface" class="hjjf.scss.impl.TeacherMgrImpl">
+		<property name="teacherDao" ref="teacherDao"></property>
+	</bean>
+	
+	<bean id="studentInterface" class="hjjf.scss.impl.StudentMgrImpl">
+		<property name="studentDao" ref="studentDao"></property>
+	</bean>
+	
+	<bean id="collegeInterface" class="hjjf.scss.impl.CollegeMgrImpl">
+		<property name="collegeDao" ref="collegeDao"></property>
+	</bean>
+	
+	<bean id="departmentInterface" class="hjjf.scss.impl.DepartmentMgrImpl">
+		<property name="departmentDao" ref="departmentDao"></property>
+	</bean>
+	
+	<bean id="professionInterface" class="hjjf.scss.impl.ProfessionMgrImpl">
+		<property name="professionDao" ref="professionDao"></property>
+	</bean>
+	
+	<bean id="classInterface" class="hjjf.scss.impl.ClassMgrImpl">
+		<property name="classDao" ref="classDao"></property>
+	</bean>
+	
+	<bean id="classRoomInterface" class="hjjf.scss.impl.ClassRoomMgrImpl">
+		<property name="classRoomDao" ref="classRoomDao"></property>
+	</bean>
+	
+	<bean id="courseInterface" class="hjjf.scss.impl.CourseMgrImpl">
+		<property name="courseDao" ref="courseDao"></property>
+	</bean>
+	
+	<bean id="teachtaskInterface" class="hjjf.scss.impl.TeachTaskMgrImpl">
+		<property name="teachtaskDao" ref="teachtaskDao"></property>
+	</bean>
+	
+	<bean id="courseScheduleInterface" class="hjjf.scss.impl.CourseScheduleMgrImpl">
+		<property name="courseScheduleDao" ref="courseScheduleDao"></property>
+		<property name="scheduleDao" ref="scheduleDao"></property>
+	</bean>
+
+	<bean id="scheduleInterface" class="hjjf.scss.impl.ScheduleMgrImpl">
+		<property name="scheduleDao" ref="scheduleDao"></property>
+		<property name="teachtaskDao" ref="teachtaskDao"></property>
+	</bean>
+	
+	<bean id="auditInterface" class="hjjf.scss.impl.AuditMgrImpl">
+		<property name="auditDao" ref="auditDao"></property>
+		<property name="teachtaskDao" ref="teachtaskDao"></property>
+	</bean>
+	
+	<bean id="noticeInterface" class="hjjf.scss.impl.NoticeMgrImpl">
+		<property name="noticeDao" ref="noticeDao"></property>
+	</bean>
+		
+</beans>

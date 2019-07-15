@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="hjjf.scss.model.TeachTask" table="T_TeachTask">
+	  <id name="ID"  column="ID" type="integer">
+	   		<generator class="native"></generator>
+	  </id>
+  	<property name="Curricula" column="Curricula" type="string" length="50"></property>
+    <property name="Auditing" column="Auditing" type="string" length="50"></property>
+  	<property name="Remarks" column="Remarks" type="text" ></property>
+  
+  <many-to-one name="teacher"  class="hjjf.scss.model.Teacher" lazy="false" >
+   <column name="TeacherID"></column>
+  </many-to-one>
+  <many-to-one  name="course" class="hjjf.scss.model.Course" lazy="false">
+   <column name="CourseID"></column>
+  </many-to-one>
+ </class>
+</hibernate-mapping>

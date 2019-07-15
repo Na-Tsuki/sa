@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+	<!-- Some or all of these can be flipped to true for debugging -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="hrefStruts" extends="employee">
+		<action name="studentup">
+			<result>/WEB-INF/content/student/studentup.jsp</result>
+		</action>
+
+		<action name="stupassup">
+			<result>/WEB-INF/content/student/stupassup.jsp</result>
+		</action>
+
+		<action name="CourseSchedule">
+			<result>/WEB-INF/content/student/CourseSchedule.jsp</result>
+		</action>
+
+		<action name="schedule">
+			<result>/WEB-INF/content/teacher/schedule.jsp</result>
+		</action>
+
+		<action name="score">
+			<result>/WEB-INF/content/teacher/score.jsp</result>
+		</action>
+
+		<action name="teachtask">
+			<result>/WEB-INF/content/teacher/teachtask.jsp</result>
+		</action>
+
+		<action name="teapassup">
+			<result>/WEB-INF/content/teacher/teapassup.jsp</result>
+		</action>
+
+		<action name="teacherup">
+			<result>/WEB-INF/content/teacher/teacherup.jsp</result>
+		</action>
+
+		<action name="index">
+			<result>/WEB-INF/content/admin/index.jsp</result>
+		</action>
+		<action name="department">
+			<result>/WEB-INF/content/admin/department.jsp</result>
+		</action>
+		<action name="profession">
+			<result>/WEB-INF/content/admin/profession.jsp</result>
+		</action>
+		<action name="course">
+			<result>/WEB-INF/content/admin/course.jsp</result>
+		</action>
+		<action name="class">
+			<result>/WEB-INF/content/admin/class.jsp</result>
+		</action>
+		<action name="classroom">
+			<result>/WEB-INF/content/admin/classRoom.jsp</result>
+		</action>
+		<action name="teacher">
+			<result>/WEB-INF/content/admin/teacher.jsp</result>
+		</action>
+		<action name="student">
+			<result>/WEB-INF/content/admin/student.jsp</result>
+		</action>
+
+
+		<action name="admindo">
+			<result>/WEB-INF/content/admin/admindo.jsp</result>
+		</action>
+		<action name="admpassup">
+			<result>/WEB-INF/content/admin/admpassup.jsp</result>
+		</action>
+		<action name="adminup">
+			<result>/WEB-INF/content/admin/adminup.jsp</result>
+		</action>
+		<action name="Audit">
+			<result>/WEB-INF/content/admin/Audit.jsp</result>
+		</action>
+			<action name="noticepub">
+			<result>/WEB-INF/content/admin/noticepub.jsp</result>
+		</action>
+		<action name="noticeview">
+			<result>/WEB-INF/content/admin/noticeview.jsp</result>
+		</action>
+	</package>
+
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+

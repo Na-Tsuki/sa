@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping >
+	<class name="hjjf.scss.model.Notice" table="T_Notice">
+		 <id name="ID"  column="ID" type="integer">
+	   		<generator class="native"></generator>
+	  </id>
+		<property name="NoticeTitle" column="NoticeTitle" type="string" length="50"></property>
+		<property name="NoticeContent" column="NoticeContent" type="string" length="1000"></property>
+		<property name="ReleaseTime" column="ReleaseTime" type="string" length="50"></property>
+		<property name="Remark" column="Remark" type="text" ></property>
+		
+		<many-to-one name="admin"  class="hjjf.scss.model.Admin" lazy="false" >
+   			<column name="AdminID"></column>
+  		</many-to-one>
+	</class>
+</hibernate-mapping>
